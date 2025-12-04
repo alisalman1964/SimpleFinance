@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Finance - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <span class="logo-icon">SF</span>
+      <span class="logo-text">Simple Finance</span>
+    </div>
+    <div class="user-area">
+      Olá, <span class="user-name">Usuário</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Perfil do usuário -->
+    <div class="perfil">
+  <div class="perfil-avatar">
+    <img src="./imagens/steverogers.jpg" alt="Avatar do usuário" class="avatar">
+  </div>
+
+  <div class="perfil-info">
+    <h2 class="perfil-nome">Steve Rogers</h2>
+    <p class="perfil-username">@cap.steve</p>
+
+    <div class="perfil-tags">
+      <span class="tag">32 anos</span>
+      <span class="tag">Brooklyn</span>
+      <span class="tag">Avenger</span>
+      <span class="tag">Conta desde 1936</span>
+    </div>
+
+    <p class="perfil-detalhe">“Lutando por justiça e bons valores desde sempre.”</p>
+
+    <p class="perfil-contato">E-mail: Cap.America420@example.com</p>
+  </div>
+</div>
+
+    <h1>Resumo financeiro</h1>
+
+    <section class="cards">
+
+      <div class="card-wrapper">
+        <button type="button" class="card card-saldo">
+          <h2>Saldo atual</h2>
+          <p id="saldo-atual" class="valor">R$ 0,00</p>
+        </button>
+        <a href="#" class="card-link" target="_blank">Acessar saldo em outra aba</a>
+      </div>
+
+      <div class="card-wrapper">
+        <button type="button" class="card card-receita">
+          <h2>Receita mensal</h2>
+          <p id="receita-mensal" class="valor">R$ 0,00</p>
+        </button>
+        <a href="#" class="card-link" target="_blank">Acessar receitas em outra aba</a>
+      </div>
+
+      <div class="card-wrapper">
+        <button type="button" class="card card-gasto">
+          <h2>Gasto mensal</h2>
+          <p id="gasto-mensal" class="valor">R$ 0,00</p>
+        </button>
+        <a href="#" class="card-link" target="_blank">Acessar gastos em outra aba</a>
+      </div>
+
+    </section>
+
+    <!-- Transações do dia -->
+    <section class="transacoes">
+      <h2>Transações de hoje</h2>
+
+      <div class="transacoes-lista">
+
+        <button type="button" class="transacao transacao-saida">
+          <div class="transacao-info">
+            <span class="transacao-titulo">Supermercado BomPreço</span>
+            <span class="transacao-hora">09:20</span>
+          </div>
+          <span class="transacao-valor negativo">- R$ 152,30</span>
+        </button>
+
+        <button type="button" class="transacao transacao-entrada">
+          <div class="transacao-info">
+            <span class="transacao-titulo">Salário - Empresa X</span>
+            <span class="transacao-hora">08:05</span>
+          </div>
+          <span class="transacao-valor positivo">+ R$ 4.500,00</span>
+        </button>
+
+        <button type="button" class="transacao transacao-saida">
+          <div class="transacao-info">
+            <span class="transacao-titulo">Uber</span>
+            <span class="transacao-hora">07:42</span>
+          </div>
+          <span class="transacao-valor negativo">- R$ 23,90</span>
+        </button>
+
+        <button type="button" class="transacao transacao-saida">
+          <div class="transacao-info">
+            <span class="transacao-titulo">Café da manhã</span>
+            <span class="transacao-hora">07:10</span>
+          </div>
+          <span class="transacao-valor negativo">- R$ 12,50</span>
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Simple Finance &copy; 2025</p>
+  </footer>
+
+  <div class="bottom-menu">
+    <button type="button" class="menu-btn">
+      ☰ Menu
+    </button>
+  </div>
+
+</body>
+</html>

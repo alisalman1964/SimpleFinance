@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #0a0f25, #030617 60%, #01040f);  color: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #020617;              
+  border-bottom: 1px solid #1f2937; 
+  position: relative;               
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;               
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.logo-text {
+  font-weight: 600;
+  letter-spacing: 0.15em;          
+}
+
+.user-area {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.user-name {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+
+.container {
+  padding: 24px;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+
+.perfil {
+  display: flex;
+  flex-direction: column;      /* tudo em coluna */
+  align-items: center;          /* centraliza horizontalmente */
+  text-align: center;           /* centraliza textos */
+  gap: 18px;
+  padding: 18px 20px;
+  margin: 10px 0 30px;
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.25), transparent 55%),
+              #020617;
+  border-radius: 14px;
+  border: 1px solid #1f2937;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Avatar */
+
+.perfil-avatar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1d4ed8;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.7);
+}
+
+/* Infos */
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* centraliza tudo */
+  gap: 6px;
+}
+
+.perfil-nome {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e5e7eb;
+  letter-spacing: 0.04em;
+}
+
+.perfil-username {
+  font-size: 13px;
+  color: #60a5fa;
+}
+
+/* Tags organizadas e centralizadas */
+
+.perfil-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;      /* centraliza tags */
+  gap: 6px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  color: #cbd5f5;
+}
+
+.perfil-detalhe {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.perfil-contato {
+  font-size: 12px;
+  color: #60a5fa;
+  word-break: break-all;
+}
+
+/* Responsivo: no mobile fica tudo em coluna e centralizado */
+
+@media (max-width: 600px) {
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .perfil-info {
+    align-items: center;
+  }
+}
+
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+  text-align: center; 
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  color: inherit;
+  width: 100%;
+}
+
+.card h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #9ca3af;
+}
+
+.valor {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.card-saldo .valor {
+  color: #38bdf8;   
+}
+
+.card-receita .valor {
+  color: #22c55e;   
+}
+
+.card-gasto .valor {
+  color: #f97316;   
+}
+
+
+.card:hover {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.card:active {
+  transform: scale(0.97);
+}
+
+
+.card:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+
+.card-link {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #60a5fa;  
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.card-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+
+
+
+.transacoes {
+  margin-top: 32px;
+}
+
+.transacoes h2 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #e5e7eb;
+}
+
+.transacoes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transacao {
+  width: 100%;
+  background: #020617;
+  border: 1px solid #111827;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  color: inherit;
+}
+
+.transacao-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.transacao-titulo {
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.transacao-hora {
+  margin-top: 2px;
+}
+
+.transacao-valor {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.transacao-valor.positivo {
+  color: #22c55e;
+}
+
+.transacao-valor.negativo {
+  color: #f97316;
+}
+
+.transacao:hover {
+  background: #0b1220;
+  border-color: #1f2937;
+}
+
+.transacao:active {
+  transform: scale(0.98);
+}
+
+.transacao:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 12px;
+  color: #6b7280;
+  border-top: 1px solid #1f2937;
+  background: #020617;
+}
+
+.bottom-menu {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.menu-btn {
+  background: linear-gradient(135deg, #557ce9, #0ea5e9);
+  color: #e5e7eb;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.8);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.2s ease;
+}
+
+.menu-btn:hover {
+  filter: brightness(1.1);
+}
+
+.menu-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.8);
+}
+
+.menu-btn:focus {
+  outline: 2px solid #e5e7eb;
+  outline-offset: 3px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .valor {
+    font-size: 20px;
+  }
+}
